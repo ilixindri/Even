@@ -3,25 +3,28 @@ import { StyleSheet, Text, View } from 'react-native';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <View style={styles.container}>
-				<View style={styles.container}>
-					<Text>Open up App.js to start working on your app!</Text>
-				</View>
-				<View style={styles.container}>
-					<Text>Open up App.js to start working on your app!</Text>
-				</View>
-			</View>
-			<View style={styles.container}>
-				<View style={styles.container}>
-					<Text>Open up App.js to start working on your app!</Text>
-				</View>
-				<View style={styles.container}>
-					<Text>Open up App.js to start working on your app!</Text>
+    <View style={{flex:1}}>
+			<View style = {{ flex: 1 , flexDirection: "row"}}>
+				<View style = {{ flex: 1 , flexDirection: "column"}}>
+					<View style = {{ flex: 1 , flexDirection: "row"}}>
+						<View>
+							<Text>Open up App.js to start working on your app!</Text>
+						</View>
+						<View>
+							<Text>Open up App.js to start working on your app!</Text>
+						</View>
+					</View>
+					<View style = {{ flex: 1 , flexDirection: "row"}}>
+						<View>
+							<Text>Open up App.js to start working on your app!</Text>
+						</View>
+						<View>
+							<Text>Open up App.js to start working on your app!</Text>
+						</View>
+					</View>
 				</View>
 			</View>
     </View>
-    
   );
 }
 
@@ -30,7 +33,6 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#fff',
     alignItems: 'center',
-    justifyContent: 'center',
     flexDirection: 'row',
   },
 });
