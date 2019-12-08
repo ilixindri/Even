@@ -1,26 +1,30 @@
+//utiliza button ao invés de TouchableHighlight
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View , TextInput, SafeAreaView , Button , InputButton } from 'react-native';
 
 export default function App() {
   return (
-    <View style={{display:"flex"}}>
-			<View style = {{ flexDirection: "column"}}>
-				<View style = {{ flexWrap: 'wrap', alignItems: 'flex-start', flexDirection: "row", float:'left'}}>
-					<Text>Open!</Text>
+    <SafeAreaView style={{display:"flex",flex:1}}>
+			<View style = {{ alignItems: 'center',flexDirection: "row",flex:1,backgroundColor:'blue'}}>
+				<View style = {{ alignItems: 'center',flexDirection: "column",flex:1}}>
+					<Button style = {{  }}
+					  title="Press me"
+					  onPress={() => Alert.alert('Simple Button pressed')}
+					/>
 				</View>
-				<View style = {{ flexWrap: 'wrap', alignItems: 'flex-start', flexDirection: "row", float:'rigth'}}>
+				<View style = {{ alignItems: 'center',flexDirection: "column",flex:1}}>
 					<Text>Openworking on your app!</Text>
 				</View>
 			</View>
-			<View style = {{ flexDirection: "column"}}>
-				<View style = {{ flexWrap: 'wrap', alignItems: 'flex-start', flexDirection: "row"}}>
+			<View style = {{ alignItems: 'center',flexDirection: "row",flex:1}}>
+				<View style = {{ alignItems: 'center',flexDirection: "column",flex:1}}>
 					<Text>Open up App.js to start working on your app!</Text>
 				</View>
-				<View style = {{ flexWrap: 'wrap', alignItems: 'flex-start', flexDirection: "row"}}>
+				<View style = {{ alignItems: 'center',flexDirection: "column",flex:1}}>
 					<Text>Open up App.js to start working on your app!</Text>
 				</View>
 			</View>
-    </View>
+    </SafeAreaView>
   );
 }
 
