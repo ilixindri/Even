@@ -1,1 +1,1 @@
-# CalcO App.v1 é uma calculadora simples .O App.v2 é uma calculadora de somente porcentagem .
+# CalcApp Android construído com o Expo e React Native .* O App.v1 é uma calculadora simples .* O App.v2 é uma calculadora de somente porcentagem .
