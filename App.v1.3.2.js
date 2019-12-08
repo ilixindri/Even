@@ -12,7 +12,7 @@ export default class App extends Component {
         <TouchableHighlight style = {{ alignItems: 'center',justifyContent: 'flex-end',flexDirection: "column",flex:1}}
               underlayColor="#193441"
                   onPress={() => Alert.alert('Simple Button pressed')}>
-          <Text style = {{ alignItems: 'center', fontSize: 50, fontWeight: 'bold'}}>{this.state.result}</Text>
+          <Text style = {{ alignItems: 'center'}}>{this.state.result}</Text>
         </TouchableHighlight>
       </View>
       <View style = {{ flexDirection: "row",flex:1}}>
@@ -43,6 +43,17 @@ export default class App extends Component {
             source={require('./assets/backspace.png')}
           />
         </TouchableHighlight>
+        <TouchableHighlight style = {{ alignItems: 'center',justifyContent: 'center',flexDirection: "column",flex:1,backgroundColor:'#7FFF00'}}
+              underlayColor="#193441"
+                  onPress={() => this.setState(previousState => (
+                              { operation: '/'}
+                                ))
+                              }>
+          <Image
+            style={{width: 50, height: 50}}
+            source={require('./assets/dividir.png')}
+          />
+        </TouchableHighlight>
       </View>
       <View style = {{ flexDirection: "row",flex:1}}>
         <TouchableHighlight style = {{ alignItems: 'center',justifyContent: 'center',flexDirection: "column",flex:1,backgroundColor:'#7FFF00'}}
@@ -68,6 +79,11 @@ export default class App extends Component {
                                 ))
                               }>
           <Text style = {{  alignItems: 'center', fontSize: 50, fontWeight: 'bold'}}>9</Text>
+        </TouchableHighlight>
+        <TouchableHighlight style = {{ alignItems: 'center',justifyContent: 'center',flexDirection: "column",flex:1,backgroundColor:'#7FFF00'}}
+              underlayColor="#193441"
+                  onPress={() => Alert.alert('Simple Button pressed')}>
+          <Text style = {{  alignItems: 'center', fontSize: 50, fontWeight: 'bold'}}>x</Text>
         </TouchableHighlight>
       </View>
       <View style = {{ flexDirection: "row",flex:1}}>
@@ -95,6 +111,11 @@ export default class App extends Component {
                               }>
           <Text style = {{  alignItems: 'center', fontSize: 50, fontWeight: 'bold'}}>6</Text>
         </TouchableHighlight>
+        <TouchableHighlight style = {{ alignItems: 'center',justifyContent: 'center',flexDirection: "column",flex:1,backgroundColor:'#7FFF00'}}
+              underlayColor="#193441"
+                  onPress={() => Alert.alert('Simple Button pressed')}>
+          <Text style = {{  alignItems: 'center', fontSize: 50, fontWeight: 'bold'}}>-</Text>
+        </TouchableHighlight>
       </View>
       <View style = {{ flexDirection: "row",flex:1}}>
         <TouchableHighlight style = {{ alignItems: 'center',justifyContent: 'center',flexDirection: "column",flex:1,backgroundColor:'#7FFF00'}}
@@ -121,12 +142,20 @@ export default class App extends Component {
                               }>
           <Text style = {{  alignItems: 'center', fontSize: 50, fontWeight: 'bold'}}>3</Text>
         </TouchableHighlight>
+        <TouchableHighlight style = {{ alignItems: 'center',justifyContent: 'center',flexDirection: "column",flex:1,backgroundColor:'#7FFF00'}}
+              underlayColor="#193441"
+                  onPress={() => Alert.alert('Simple Button pressed')}>
+          <Text style = {{  alignItems: 'center', fontSize: 50, fontWeight: 'bold'}}>+</Text>
+        </TouchableHighlight>
       </View>
       <View style = {{ flexDirection: "row",flex:1}}>
         <TouchableHighlight style = {{ alignItems: 'center',justifyContent: 'center',flexDirection: "column",flex:1,backgroundColor:'#7FFF00'}}
               underlayColor="#193441"
-                  >
-              <Text></Text>
+                  onPress={() => Alert.alert('Simple Button pressed')}>
+          <Image
+            style={{width: 50, height: 50}}
+            source={require('./assets/plus-minus.png')}
+          />
         </TouchableHighlight>
         <TouchableHighlight style = {{ alignItems: 'center',justifyContent: 'center',flexDirection: "column",flex:1,backgroundColor:'#7FFF00'}}
               underlayColor="#193441"
@@ -143,6 +172,11 @@ export default class App extends Component {
                                 ))
                               }>
           <Text style = {{  alignItems: 'center', fontSize: 50, fontWeight: 'bold'}}>.</Text>
+        </TouchableHighlight>
+        <TouchableHighlight style = {{ alignItems: 'center',justifyContent: 'center',flexDirection: "column",flex:1,backgroundColor:'#7FFF00'}}
+              underlayColor="#193441"
+                  onPress={() => Alert.alert('Simple Button pressed')}>
+          <Text style = {{  alignItems: 'center', fontSize: 50, fontWeight: 'bold'}}>=</Text>
         </TouchableHighlight>
       </View>
       </SafeAreaView>

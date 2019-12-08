@@ -1,1 +1,1 @@
-# Calc
+# CalcO App.v1 é uma calculadora simples .O App.v2 é uma calculadora de somente porcentagem .
