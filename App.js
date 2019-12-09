@@ -3,11 +3,10 @@ import React , { Component } from 'react';
 import { StyleSheet, Text, View , TextInput, SafeAreaView , Button , Alert , TouchableHighlight , Image } from 'react-native';
 
 export default class App extends Component {
-  state = { result: 12,
-            label: 'Geração ',
-            generation: 1,
-            resultDefault: 12,
-            generationDefault: 12
+  state = { result: 0,
+            label: 'Número ',
+            numero: 1,
+            ultimo: 1
           };
   render() {
     return (
@@ -23,8 +22,9 @@ export default class App extends Component {
               underlayColor="#193441"
                   onPress={() => this.setState(previousState => (
                               {
-                                result: previousState.resultDefault,
-                                generation: 1
+                                result: 0,
+                                numero: 1,
+                                ultimo: 1
                               }
                                 ))
                               }>
@@ -36,12 +36,13 @@ export default class App extends Component {
               underlayColor="#193441"
                   onPress={() => this.setState(previousState => (
                               {
-                                result: previousState.result * previousState.generationDefault,
-                                generation: previousState.generation+1
+                                result: previousState.result + previousState.ultimo,
+                                ultimo: previousState.result,
+                                numero: previousState.numero+1
                               }
                                 ))
                               }>
-          <Text style = {{ alignItems: 'center', fontSize: 50, fontWeight: 'bold'}}>{this.state.label + this.state.generation}</Text>
+          <Text style = {{ alignItems: 'center', fontSize: 50, fontWeight: 'bold'}}>{this.state.label + this.state.numero}</Text>
         </TouchableHighlight>
       </View>
       </SafeAreaView>
