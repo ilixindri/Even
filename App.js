@@ -3,11 +3,12 @@ import React , { Component } from 'react';
 import { StyleSheet, Text, View , TextInput, SafeAreaView , Button , Alert , TouchableHighlight , Image } from 'react-native';
 
 export default class App extends Component {
-  state = { result: 1,
+  state = { result: 2,
             label: 'Geração ',
             generation: 1,
-            resultDefault: 1,
-            generationDefault: 1};
+            resultDefault: 2,
+            generationDefault: 2
+          };
   render() {
     return (
       <SafeAreaView style={{display:"flex",flex:1}}>
@@ -35,7 +36,7 @@ export default class App extends Component {
               underlayColor="#193441"
                   onPress={() => this.setState(previousState => (
                               {
-                                result: previousState.result + previousState.generationDefault,
+                                result: previousState.result * previousState.generationDefault,
                                 generation: previousState.generation+1
                               }
                                 ))
