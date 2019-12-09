@@ -3,11 +3,11 @@ import React , { Component } from 'react';
 import { StyleSheet, Text, View , TextInput, SafeAreaView , Button , Alert , TouchableHighlight , Image } from 'react-native';
 
 export default class App extends Component {
-  state = { result: 2,
+  state = { result: 12,
             label: 'Geração ',
             generation: 1,
-            resultDefault: 2,
-            generationDefault: 2
+            resultDefault: 12,
+            generationDefault: 12
           };
   render() {
     return (

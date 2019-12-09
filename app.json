@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "Modelo Um",
-    "slug": "modelo-um",
+    "name": "Modelo Dois",
+    "slug": "modelo-dois",
     "privacy": "public",
     "sdkVersion": "35.0.0",
     "platforms": [
@@ -23,7 +23,7 @@
       "**/*"
     ],
     "android": {
-      "package": "com.alexandrogonsan.modeloum"
+      "package": "com.alexandrogonsan.modelodois"
     }
   }
 }
