@@ -3,15 +3,17 @@ import React , { Component } from 'react';
 import { StyleSheet, Text, View , TextInput, SafeAreaView , Button , Alert , TouchableHighlight , Image } from 'react-native';
 
 export default class App extends Component {
-  state = { result: '',
-            operation: '' };
+  state = { result: 1,
+            label: 'Geração ',
+            generation: 1,
+            resultDefault: 1,
+            generationDefault: 1};
   render() {
     return (
       <SafeAreaView style={{display:"flex",flex:1}}>
       <View style = {{ flexDirection: "row",flex:1,backgroundColor:'blue'}}>
-        <TouchableHighlight style = {{ alignItems: 'center',justifyContent: 'flex-end',flexDirection: "column",flex:1}}
-              underlayColor="#193441"
-                  onPress={() => Alert.alert('Simple Button pressed')}>
+        <TouchableHighlight style = {{ alignItems: 'center',justifyContent: 'center',flexDirection: "column",flex:1}}
+              underlayColor="#193441">
           <Text style = {{ alignItems: 'center', fontSize: 50, fontWeight: 'bold'}}>{this.state.result}</Text>
         </TouchableHighlight>
       </View>
@@ -19,130 +21,26 @@ export default class App extends Component {
         <TouchableHighlight style = {{ alignItems: 'center',justifyContent: 'center',flexDirection: "column",flex:1,backgroundColor:'#7FFF00'}}
               underlayColor="#193441"
                   onPress={() => this.setState(previousState => (
-                              { result: previousState.result/100}
+                              {
+                                result: previousState.resultDefault,
+                                generation: 1
+                              }
                                 ))
                               }>
-          <Text style = {{ alignItems: 'center', fontSize: 50, fontWeight: 'bold'}}>%</Text>
-        </TouchableHighlight>
-        <TouchableHighlight style = {{ alignItems: 'center',justifyContent: 'center',flexDirection: "column",flex:1,backgroundColor:'#7FFF00'}}
-              underlayColor="#193441"
-                  onPress={() => this.setState(previousState => (
-                              { result: ''}
-                                ))
-                              }>
-          <Text style = {{  alignItems: 'center', fontSize: 50, fontWeight: 'bold'}}>C</Text>
-        </TouchableHighlight>
-        <TouchableHighlight style = {{ alignItems: 'center',justifyContent: 'center',flexDirection: "column",flex:1,backgroundColor:'#7FFF00'}}
-              underlayColor="#193441"
-                  onPress={() => this.setState(previousState => (
-                              { result: previousState.result.substring(0, previousState.result.length-1)}
-                                ))
-                              }>
-          <Image
-            style={{width: 70, height: 70}}
-            source={require('./assets/backspace.png')}
-          />
+          <Text style = {{ alignItems: 'center', fontSize: 50, fontWeight: 'bold'}}>C</Text>
         </TouchableHighlight>
       </View>
       <View style = {{ flexDirection: "row",flex:1}}>
         <TouchableHighlight style = {{ alignItems: 'center',justifyContent: 'center',flexDirection: "column",flex:1,backgroundColor:'#7FFF00'}}
               underlayColor="#193441"
                   onPress={() => this.setState(previousState => (
-                              { result: previousState.result+'7'}
+                              {
+                                result: previousState.result + previousState.generationDefault,
+                                generation: previousState.generation+1
+                              }
                                 ))
                               }>
-          <Text style = {{ alignItems: 'center', fontSize: 50, fontWeight: 'bold'}}>7</Text>
-        </TouchableHighlight>
-        <TouchableHighlight style = {{ alignItems: 'center',justifyContent: 'center',flexDirection: "column",flex:1,backgroundColor:'#7FFF00'}}
-              underlayColor="#193441"
-                  onPress={() => this.setState(previousState => (
-                              { result: previousState.result+'8'}
-                                ))
-                              }>
-          <Text style = {{  alignItems: 'center', fontSize: 50, fontWeight: 'bold'}}>8</Text>
-        </TouchableHighlight>
-        <TouchableHighlight style = {{ alignItems: 'center',justifyContent: 'center',flexDirection: "column",flex:1,backgroundColor:'#7FFF00'}}
-              underlayColor="#193441"
-                  onPress={() => this.setState(previousState => (
-                              { result: previousState.result+'9'}
-                                ))
-                              }>
-          <Text style = {{  alignItems: 'center', fontSize: 50, fontWeight: 'bold'}}>9</Text>
-        </TouchableHighlight>
-      </View>
-      <View style = {{ flexDirection: "row",flex:1}}>
-        <TouchableHighlight style = {{ alignItems: 'center',justifyContent: 'center',flexDirection: "column",flex:1,backgroundColor:'#7FFF00'}}
-              underlayColor="#193441"
-                  onPress={() => this.setState(previousState => (
-                              { result: previousState.result+'4'}
-                                ))
-                              }>
-          <Text style = {{ alignItems: 'center', fontSize: 50, fontWeight: 'bold'}}>4</Text>
-        </TouchableHighlight>
-        <TouchableHighlight style = {{ alignItems: 'center',justifyContent: 'center',flexDirection: "column",flex:1,backgroundColor:'#7FFF00'}}
-              underlayColor="#193441"
-                  onPress={() => this.setState(previousState => (
-                              { result: previousState.result+'5'}
-                                ))
-                              }>
-          <Text style = {{  alignItems: 'center', fontSize: 50, fontWeight: 'bold'}}>5</Text>
-        </TouchableHighlight>
-        <TouchableHighlight style = {{ alignItems: 'center',justifyContent: 'center',flexDirection: "column",flex:1,backgroundColor:'#7FFF00'}}
-              underlayColor="#193441"
-                  onPress={() => this.setState(previousState => (
-                              { result: previousState.result+'6'}
-                                ))
-                              }>
-          <Text style = {{  alignItems: 'center', fontSize: 50, fontWeight: 'bold'}}>6</Text>
-        </TouchableHighlight>
-      </View>
-      <View style = {{ flexDirection: "row",flex:1}}>
-        <TouchableHighlight style = {{ alignItems: 'center',justifyContent: 'center',flexDirection: "column",flex:1,backgroundColor:'#7FFF00'}}
-              underlayColor="#193441"
-                  onPress={() => this.setState(previousState => (
-                              { result: previousState.result+'1'}
-                                ))
-                              }>
-          <Text style = {{ alignItems: 'center', fontSize: 50, fontWeight: 'bold'}}>1</Text>
-        </TouchableHighlight>
-        <TouchableHighlight style = {{ alignItems: 'center',justifyContent: 'center',flexDirection: "column",flex:1,backgroundColor:'#7FFF00'}}
-              underlayColor="#193441"
-                  onPress={() => this.setState(previousState => (
-                              { result: previousState.result+'2'}
-                                ))
-                              }>
-          <Text style = {{  alignItems: 'center', fontSize: 50, fontWeight: 'bold'}}>2</Text>
-        </TouchableHighlight>
-        <TouchableHighlight style = {{ alignItems: 'center',justifyContent: 'center',flexDirection: "column",flex:1,backgroundColor:'#7FFF00'}}
-              underlayColor="#193441"
-                  onPress={() => this.setState(previousState => (
-                              { result: previousState.result+'3'}
-                                ))
-                              }>
-          <Text style = {{  alignItems: 'center', fontSize: 50, fontWeight: 'bold'}}>3</Text>
-        </TouchableHighlight>
-      </View>
-      <View style = {{ flexDirection: "row",flex:1}}>
-        <TouchableHighlight style = {{ alignItems: 'center',justifyContent: 'center',flexDirection: "column",flex:1,backgroundColor:'#7FFF00'}}
-              underlayColor="#193441"
-                  >
-              <Text></Text>
-        </TouchableHighlight>
-        <TouchableHighlight style = {{ alignItems: 'center',justifyContent: 'center',flexDirection: "column",flex:1,backgroundColor:'#7FFF00'}}
-              underlayColor="#193441"
-                  onPress={() => this.setState(previousState => (
-                              { result: previousState.result+'0'}
-                                ))
-                              }>
-          <Text style = {{  alignItems: 'center', fontSize: 50, fontWeight: 'bold'}}>0</Text>
-        </TouchableHighlight>
-        <TouchableHighlight style = {{ alignItems: 'center',justifyContent: 'center',flexDirection: "column",flex:1,backgroundColor:'#7FFF00'}}
-              underlayColor="#193441"
-                  onPress={() => this.setState(previousState => (
-                              { result: previousState.result+'.'}
-                                ))
-                              }>
-          <Text style = {{  alignItems: 'center', fontSize: 50, fontWeight: 'bold'}}>.</Text>
+          <Text style = {{ alignItems: 'center', fontSize: 50, fontWeight: 'bold'}}>{this.state.label + this.state.generation}</Text>
         </TouchableHighlight>
       </View>
       </SafeAreaView>

@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "Calculator Percentage",
-    "slug": "a-percentage-calculator-en",
+    "name": "Modelo Um",
+    "slug": "modelo-um",
     "privacy": "public",
     "sdkVersion": "35.0.0",
     "platforms": [
@@ -23,7 +23,7 @@
       "**/*"
     ],
     "android": {
-      "package": "com.alexandrogonsan.calculatorpercentage"
+      "package": "com.alexandrogonsan.modeloum"
     }
   }
 }
