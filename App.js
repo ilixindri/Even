@@ -3,17 +3,19 @@ import React , { Component } from 'react';
 import { StyleSheet, Text, View , TextInput, SafeAreaView , Button , Alert , TouchableHighlight , Image } from 'react-native';
 
 export default class App extends Component {
-  state = { result: 0,
-            label: 'Número ',
-            numero: 1,
-            ultimo: 1
+  state = { result: 2,
+            label: 'Número Par ',
+            numero: 1
           };
+  func(){};
   render() {
     return (
       <SafeAreaView style={{display:"flex",flex:1}}>
       <View style = {{ flexDirection: "row",flex:1,backgroundColor:'blue'}}>
         <TouchableHighlight style = {{ alignItems: 'center',justifyContent: 'center',flexDirection: "column",flex:1}}
-              underlayColor="#193441">
+              underlayColor="#193441"
+              onPress={() => this.func()
+                              }>
           <Text style = {{ alignItems: 'center', fontSize: 50, fontWeight: 'bold'}}>{this.state.result}</Text>
         </TouchableHighlight>
       </View>
@@ -22,9 +24,8 @@ export default class App extends Component {
               underlayColor="#193441"
                   onPress={() => this.setState(previousState => (
                               {
-                                result: 0,
-                                numero: 1,
-                                ultimo: 1
+                                result: 2,
+                                numero: 1
                               }
                                 ))
                               }>
@@ -36,8 +37,7 @@ export default class App extends Component {
               underlayColor="#193441"
                   onPress={() => this.setState(previousState => (
                               {
-                                result: previousState.result + previousState.ultimo,
-                                ultimo: previousState.result,
+                                result: previousState.result + 2,
                                 numero: previousState.numero+1
                               }
                                 ))
